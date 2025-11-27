@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "../ui/card";
-import { LucideIcon, Newspaper } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 interface DashboardCardProps {
   title: string;
@@ -13,7 +13,7 @@ export default function DashboardCard({
   icon,
 }: DashboardCardProps) {
   return (
-    <Card className="bg-slate-100 p-4 pb-0 dark:bg-slate-800">
+    <Card className="flex-1 bg-slate-100 p-4 pb-0 dark:bg-slate-800">
       <CardContent>
         <h3 className="pb-4 text-center text-3xl font-bold text-slate-500 dark:text-slate-200">
           {title}

@@ -1,9 +1,11 @@
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import { Folder, MessageCircle, Newspaper, User } from "lucide-react";
+
+import PostsTable from "@/components/posts/PostsTable";
 export default function Home() {
   return (
     <>
-      <div className="mb-5 flex flex-col justify-between gap-5 md:flex-row">
+      <div className="mb-5 flex flex-wrap justify-between gap-5 md:flex-row">
         <DashboardCard
           title="Posts"
           icon={<Newspaper size={72} className="text-slate-500" />}
@@ -25,6 +27,7 @@ export default function Home() {
           count={1200}
         />
       </div>
+      <PostsTable title="Latest posts" limit={5} />
     </>
   );
 }
