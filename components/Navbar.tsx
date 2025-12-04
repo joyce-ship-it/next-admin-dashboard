@@ -11,7 +11,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
+import { ThemeToggler } from "./ThemeToggler";
 export default function Navbar() {
   return (
     <div className="flex justify-between bg-primary px-5 py-2 text-gray-200 dark:bg-slate-700 dark:text-white">
@@ -23,27 +23,30 @@ export default function Navbar() {
         />
       </Link>
 
-      <DropdownMenu>
-        <DropdownMenuTrigger>
-          <Avatar>
-            <AvatarImage
-              src="https://pbs.twimg.com/media/CrGcb6iXEAAaea4.jpg"
-              alt="former f1 world champion Vettel"
-              className="object-contain"
-            ></AvatarImage>
-            <AvatarFallback className="text-black">YN</AvatarFallback>
-          </Avatar>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
-          <DropdownMenuItem>
-            <Link href="/profile">Profile</Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Link href={"/auth"}>Logout</Link>
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+      <div className="flex items-center space-x-2">
+        <ThemeToggler></ThemeToggler>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Avatar>
+              <AvatarImage
+                src="https://pbs.twimg.com/media/CrGcb6iXEAAaea4.jpg"
+                alt="former f1 world champion Vettel"
+                className="object-contain"
+              ></AvatarImage>
+              <AvatarFallback className="text-black">YN</AvatarFallback>
+            </Avatar>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuItem>
+              <Link href="/profile">Profile</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link href={"/auth"}>Logout</Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
     </div>
   );
 }
