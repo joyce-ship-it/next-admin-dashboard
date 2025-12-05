@@ -1,5 +1,9 @@
 This project use NextJS, shadcn-ui and TypeScript to create a dummy Front-end facing dashboard which is intuitive to use.
 
+Several shadcn components have been used to create the ui which includes the card, pagination, button, theme toggler, form and a few more.
+
+Preview: https://next-admin-dahboard.netlify.app/
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
